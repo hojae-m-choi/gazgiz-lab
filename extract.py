@@ -4,7 +4,7 @@ from bs4 import BeautifulSoup
 def extract_text_from_url(url):
     try:
         # Send an HTTP request to the URL
-        response = requests.get(url)
+        response = requests.get(url, timeout=10)
         # Raise an exception if the request was unsuccessful
         response.raise_for_status()
 
